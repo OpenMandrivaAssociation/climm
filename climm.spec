@@ -10,7 +10,7 @@ Source0:       http://www.climm.org/source/%{name}-%{version}.tgz
 Patch0:        micq-0.5.4.1-tcl-8.5.patch
 Patch1:        micq-0.5.4-am_prog_cc_c_o.patch
 BuildRequires: gettext-devel
-BuildRequires: gloox-devel
+#BuildRequires: gloox-devel
 BuildRequires: gnutls-devel
 BuildRequires: libotr-devel
 BuildRequires: tcl-devel
@@ -32,7 +32,7 @@ messaging/conferencing program.
                  --enable-otr \
                  --enable-ssl=gnutls \
                  --enable-tcl \
-                 --enable-xmpp \
+                 --disable-xmpp \
                  --disable-binreloc \
                  --disable-rpath
 %{make}
