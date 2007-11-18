@@ -18,8 +18,13 @@ Obsoletes:     micq
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
-mICQ is a text-mode clone of the Mirabilis ICQ online
-messaging/conferencing program.
+climm is a very portable text-mode ICQ clone - it is known to compile
+under Linux, BSD, AIX, HPUX, Windows, AmigaOS and with restrictions
+BeOS. Originally written by Matthew D. Smith, a great part of climm
+has been rewritten by Rudiger Kuhlmann, in particular the support for
+the new version 8 of the OSCAR protocol that became necessary, the
+internationalization, the file transfer and some restructuring of
+the code.
 
 %prep
 %setup -q
