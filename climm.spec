@@ -1,20 +1,20 @@
 Name:          climm
 Version:       0.6.1
-Release:       %mkrel 1
+Release:       %mkrel 2
 Epoch:         0
 Summary:       Text-mode ICQ clone
 Group:         Networking/Instant messaging
 License:       GPL
 URL:           http://www.climm.org/
 Source0:       http://www.climm.org/source/%{name}-%{version}.tgz
-Patch0:        micq-0.5.4.1-tcl-8.5.patch
-Patch1:        micq-0.5.4-am_prog_cc_c_o.patch
-BuildRequires: gettext-devel
+Obsoletes:      micq < %{version}-%{release}
+Provides:       micq = %{version}-%{release}
+BuildRequires:  enca
+BuildRequires:  gettext-devel
 #BuildRequires: gloox-devel
-BuildRequires: gnutls-devel
-BuildRequires: libotr-devel
-BuildRequires: tcl-devel
-Obsoletes:     micq
+BuildRequires:  gnutls-devel
+BuildRequires:  libotr-devel
+BuildRequires:  tcl-devel
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
@@ -28,11 +28,8 @@ the code.
 
 %prep
 %setup -q
-#%patch0 -p1
-#%patch1 -p1
 
 %build
-%{_bindir}/autoreconf -v -i
 %{configure2_5x} --disable-dependency-tracking \
                  --enable-otr \
                  --enable-ssl=gnutls \
@@ -44,14 +41,24 @@ the code.
 
 %install
 %{__rm} -rf %{buildroot}
-%{makeinstall_std}
+%{makeinstall_std} INSTALL="%{__install} -p"
+# convert documentation to UTF-8, when possible
+# es, fr are 7bit, sr is already UTF8
+%{_bindir}/enconv -L russian -x UTF-8 doc/ru/*
+%{_bindir}/enconv -L slovak -x UTF-8 doc/sk/*
+%{_bindir}/enconv -L ukrainian -x UTF-8 doc/uk/* || :
+for i in doc/de/* doc/pt_BR/* doc/it/*; do
+  %{_bindir}/iconv -f iso8859-1 -t UTF-8 $i > $i.tmp
+  %{__mv} -f $i.tmp $i
+done
 
 %clean
 %{__rm} -rf %{buildroot}
 
 %files
-%defattr(-,root,root,0755)
-%doc AUTHORS COPYING COPYING-GPLv2 ChangeLog FAQ INSTALL NEWS README TODO contrib/
+%defattr(0644,root,root,0755)
+%doc NEWS AUTHORS FAQ README TODO COPYING COPYING-GPLv2
+%doc doc/README.i18n doc/README.logformat doc/README.ssl doc/example-climm-event-script
 %attr(0755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %defattr(0644,root,root,0755)
