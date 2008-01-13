@@ -1,10 +1,10 @@
 Name:          climm
 Version:       0.6.1
-Release:       %mkrel 2
+Release:       %mkrel 3
 Epoch:         0
 Summary:       Text-mode ICQ clone
 Group:         Networking/Instant messaging
-License:       GPL
+License:       GPLv2+
 URL:           http://www.climm.org/
 Source0:       http://www.climm.org/source/%{name}-%{version}.tgz
 Obsoletes:      micq < %{version}-%{release}
@@ -57,7 +57,7 @@ done
 
 %files
 %defattr(0644,root,root,0755)
-%doc NEWS AUTHORS FAQ README TODO COPYING COPYING-GPLv2
+%doc NEWS AUTHORS FAQ README TODO
 %doc doc/README.i18n doc/README.logformat doc/README.ssl doc/example-climm-event-script
 %attr(0755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
