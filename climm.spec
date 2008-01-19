@@ -1,6 +1,6 @@
 Name:          climm
 Version:       0.6.1
-Release:       %mkrel 3
+Release:       %mkrel 4
 Epoch:         0
 Summary:       Text-mode ICQ clone
 Group:         Networking/Instant messaging
