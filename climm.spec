@@ -37,7 +37,7 @@ the code.
                  --enable-xmpp \
                  --disable-binreloc \
                  --disable-rpath
-%{make}
+make
 
 %install
 %{__rm} -rf %{buildroot}
