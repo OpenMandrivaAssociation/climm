@@ -1,6 +1,6 @@
 Name:          climm
-Version:       0.6.1
-Release:       %mkrel 4
+Version:       0.6.2
+Release:       %mkrel 1
 Epoch:         0
 Summary:       Text-mode ICQ clone
 Group:         Networking/Instant messaging
@@ -11,7 +11,7 @@ Obsoletes:      micq < %{version}-%{release}
 Provides:       micq = %{version}-%{release}
 BuildRequires:  enca
 BuildRequires:  gettext-devel
-#BuildRequires: gloox-devel
+BuildRequires: gloox-devel
 BuildRequires:  gnutls-devel
 BuildRequires:  libotr-devel
 BuildRequires:  tcl-devel
@@ -34,7 +34,7 @@ the code.
                  --enable-otr \
                  --enable-ssl=gnutls \
                  --enable-tcl \
-                 --disable-xmpp \
+                 --enable-xmpp \
                  --disable-binreloc \
                  --disable-rpath
 %{make}
