@@ -1,21 +1,21 @@
-Name:          climm
-Version:       0.6.3
-Release:       %mkrel 1
-Epoch:         0
-Summary:       Text-mode ICQ clone
-Group:         Networking/Instant messaging
-License:       GPLv2+
-URL:           http://www.climm.org/
-Source0:       http://www.climm.org/source/%{name}-%{version}.tgz
-Obsoletes:      micq < %{version}-%{release}
-Provides:       micq = %{version}-%{release}
-BuildRequires:  enca
-BuildRequires:  gettext-devel
-BuildRequires: gloox-devel
-BuildRequires:  gnutls-devel
-BuildRequires:  libotr-devel
-BuildRequires:  tcl-devel
-BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root
+Name:		climm
+Version:	0.6.3
+Release:	%{mkrel 2}
+Epoch:		0
+Summary:	Text-mode ICQ clone
+Group:		Networking/Instant messaging
+License:	GPLv2+
+URL:		http://www.climm.org/
+Source0:	http://www.climm.org/source/%{name}-%{version}.tgz
+Obsoletes:	micq < %{version}-%{release}
+Provides:	micq = %{version}-%{release}
+BuildRequires:	enca
+BuildRequires:	gettext-devel
+BuildRequires:	gloox-devel
+BuildRequires:	gnutls-devel
+BuildRequires:	libotr-devel
+BuildRequires:	tcl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 climm is a very portable text-mode ICQ clone - it is known to compile
