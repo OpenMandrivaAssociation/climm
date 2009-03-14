@@ -1,12 +1,13 @@
 Name:		climm
-Version:	0.6.3
-Release:	%{mkrel 2}
+Version:	0.6.4
+Release:	%mkrel 1
 Epoch:		0
 Summary:	Text-mode ICQ clone
 Group:		Networking/Instant messaging
 License:	GPLv2+
 URL:		http://www.climm.org/
 Source0:	http://www.climm.org/source/%{name}-%{version}.tgz
+Patch0:		climm-0.6.4-linktcl.patch
 Obsoletes:	micq < %{version}-%{release}
 Provides:	micq = %{version}-%{release}
 BuildRequires:	enca
@@ -28,8 +29,10 @@ the code.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
+autoreconf -fi
 %{configure2_5x} --disable-dependency-tracking \
                  --enable-otr \
                  --enable-ssl=gnutls \
@@ -69,6 +72,7 @@ done
 %{_mandir}/man?/*
 %lang(pt_BR) %{_mandir}/pt_BR/man?/*
 %lang(ru) %{_mandir}/ru/man?/*
+%lang(se) %{_mandir}/se/man?/*
 %lang(sk) %{_mandir}/sk/man?/*
 %lang(sr) %{_mandir}/sr/man?/*
 %lang(uk) %{_mandir}/uk/man?/*
