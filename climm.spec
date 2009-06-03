@@ -1,6 +1,6 @@
 Name:		climm
 Version:	0.6.4
-Release:	%mkrel 1
+Release:	%mkrel 2
 Epoch:		0
 Summary:	Text-mode ICQ clone
 Group:		Networking/Instant messaging
@@ -8,6 +8,8 @@ License:	GPLv2+
 URL:		http://www.climm.org/
 Source0:	http://www.climm.org/source/%{name}-%{version}.tgz
 Patch0:		climm-0.6.4-linktcl.patch
+Patch1:		climm-0.6.4-gnutls-2.8.patch
+Patch2:		climm-0.6.4-fix-install.patch
 Obsoletes:	micq < %{version}-%{release}
 Provides:	micq = %{version}-%{release}
 BuildRequires:	enca
@@ -30,6 +32,8 @@ the code.
 %prep
 %setup -q
 %patch0 -p0
+%patch1 -p0
+%patch2 -p0
 
 %build
 autoreconf -fi
