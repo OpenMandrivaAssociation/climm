@@ -18,6 +18,7 @@ BuildRequires:	gloox-devel
 BuildRequires:	gnutls-devel
 BuildRequires:	libotr-devel
 BuildRequires:	tcl-devel
+BuildRequires:	libiksemel-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
