@@ -1,5 +1,5 @@
 Name:		climm
-Version:	0.7
+Version:	0.7.1
 Release:	%mkrel 1
 Epoch:		0
 Summary:	Text-mode ICQ clone
@@ -8,8 +8,7 @@ License:	GPLv2+
 URL:		http://www.climm.org/
 Source0:	http://www.climm.org/source/%{name}-%{version}.tgz
 Patch0:		climm-0.6.4-linktcl.patch
-Patch1:		climm-0.6.4-gnutls-2.8.patch
-Patch2:		climm-0.6.4-fix-install.patch
+Patch1:		climm-0.7.1-gnutls-2.8.patch
 Obsoletes:	micq < %{version}-%{release}
 Provides:	micq = %{version}-%{release}
 BuildRequires:	enca
@@ -34,7 +33,6 @@ the code.
 %setup -q
 %patch0 -p0
 %patch1 -p0
-%patch2 -p0
 
 %build
 autoreconf -fi
@@ -43,7 +41,6 @@ autoreconf -fi
                  --enable-ssl=gnutls \
                  --enable-tcl \
                  --enable-xmpp \
-                 --disable-binreloc \
                  --disable-rpath
 make
 
