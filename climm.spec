@@ -78,3 +78,173 @@ done
 %lang(sk) %{_mandir}/sk/man?/*
 %lang(sr) %{_mandir}/sr/man?/*
 %lang(uk) %{_mandir}/uk/man?/*
+
+
+%changelog
+* Wed Sep 22 2010 Funda Wang <fwang@mandriva.org> 0:0.7.1-1mdv2011.0
++ Revision: 580568
+- New version 0.7.1
+
+* Fri Oct 02 2009 Funda Wang <fwang@mandriva.org> 0:0.7-1mdv2010.1
++ Revision: 452490
+- BR iksemel
+- New version 0.7
+
+* Wed Jun 03 2009 Funda Wang <fwang@mandriva.org> 0:0.6.4-2mdv2010.0
++ Revision: 382359
+- rebuild for gnutls 2.8
+
+* Sat Mar 14 2009 Funda Wang <fwang@mandriva.org> 0:0.6.4-1mdv2009.1
++ Revision: 354999
+- new version 0.6.4
+- build with newer tcl
+
+* Sat Dec 06 2008 Adam Williamson <awilliamson@mandriva.org> 0:0.6.3-2mdv2009.1
++ Revision: 311072
+- rebuild for new tcl
+- spec clean
+
+* Sun Oct 12 2008 Funda Wang <fwang@mandriva.org> 0:0.6.3-1mdv2009.1
++ Revision: 292808
+- New version 0.6.3
+
+* Wed Jul 23 2008 Thierry Vignaud <tv@mandriva.org> 0:0.6.2-3mdv2009.0
++ Revision: 243528
+- rebuild
+
+* Sun Mar 02 2008 Funda Wang <fwang@mandriva.org> 0:0.6.2-1mdv2008.1
++ Revision: 177610
+- disable parallel build
+- New version 0.6.2
+- Reenable xmpp protocol
+
+* Sat Jan 19 2008 Funda Wang <fwang@mandriva.org> 0:0.6.1-4mdv2008.1
++ Revision: 155051
+- rebuild against latest gnutls
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+
+* Fri Nov 23 2007 David Walluck <walluck@mandriva.org> 0:0.6.1-2mdv2008.1
++ Revision: 111687
+- remove unused patches
+- provide micq
+- include documentation conversion from Fedora
+
+* Sun Nov 18 2007 Funda Wang <fwang@mandriva.org> 0:0.6.1-1mdv2008.1
++ Revision: 109818
+- fix description
+- disable xmpp build
+- New version 0.6.1
+- micq renamed to climm
+- rebuild
+
+  + Anssi Hannula <anssi@mandriva.org>
+    - rebuild for new soname of tcl
+
+* Mon Jun 11 2007 David Walluck <walluck@mandriva.org> 0:0.5.4.1-1mdv2008.0
++ Revision: 38003
+- 0.5.4.1
+
+* Thu Jun 07 2007 David Walluck <walluck@mandriva.org> 0:0.5.4-2mdv2008.0
++ Revision: 36127
+- BuildRequires: gettext-devel
+- update summary
+- patch for tcl8.5 support
+- build with otr support
+- be more explicit with configure options
+- more explicit file permissions in file list
+- 0.5.4
+- enable XMPP support
+- Import micq
+
+
+
+* Tue Feb 28 2006 Jerome Soyer <saispo@mandriva.org> 0.5.1-1mdk
+- New release 0.5.1
+
+* Mon Jan 02 2006 Oden Eriksson <oeriksson@mandriva.com> 0.5.0.4-2mdk
+- rebuilt against soname aware deps (tcl/tk)
+- fix deps
+
+* Sat Oct  1 2005 Couriousous <couriousous@mandriva.org> 0.5.0.4-1mdk
+- 0.5.0.4
+- Mandrakelinux -> Mandriva
+
+* Thu Feb 17 2005 Couriousous <couriousous@mandrake.org> 0.5-1mdk
+- 0.5
+
+* Sun Dec 26 2004 Couriousous <couriousous@mandrake.org> 0.4.99.9-1mdk
+- Update MICQ_EXTRAVERSION
+- Fix BuildRequires
+- Fix Summary
+- From: Marc Koschewski
+	- 0.4.99.9
+
+* Mon Jan 19 2004 Lenny Cartier <lenny@mandrakesoft.com> 0.4.11-1mdk
+- 0.4.11
+
+* Tue Oct 07 2003 Lenny Cartier <lenny@mandrakesoft.com> 0.4.10.5-1mdk
+- 0.4.10.5
+
+* Tue Sep 23 2003 Lenny Cartier <lenny@mandrakesoft.com> 0.4.10.4-1mdk
+- 0.4.10.4
+
+* Wed Jun 04 2003 Lenny Cartier <lenny@mandrakesoft.com> 0.4.10.3-2mdk
+- fix license
+- add patch0 from author
+
+* Thu May 15 2003 Lenny Cartier <lenny@mandrakesoft.com> 0.4.10.3-1mdk
+- 0.4.10.3
+
+* Mon Mar 17 2003 Lenny Cartier <lenny@mandrakesoft.com> 0.4.10.2-1mdk
+- 0.4.10.2
+
+* Mon Jan 27 2003 Lenny Cartier <lenny@mandrakesoft.com> 0.4.10.1-1mdk
+- 0.4.10.1
+
+* Wed Jan 08 2003 Lenny Cartier <lenny@mandrakesoft.com> 0.4.10-1mdk
+- 0.4.10
+
+* Mon Oct 14 2002 Lenny Cartier <lenny@mandrakesoft.com> 0.4.9.4-3mdk
+- change desc.
+
+* Fri Oct 11 2002 Lenny Cartier <lenny@mandrakesoft.com> 0.4.9.4-2mdk
+- export MICQ_EXTRAVERSION=Mandrake
+
+* Mon Oct 07 2002 Lenny Cartier <lenny@mandrakesoft.com> 0.4.9.4-1mdk
+- 0.4.9.4
+
+* Tue Aug 27 2002 Lenny Cartier <lenny@mandrakesoft.com> 0.4.9.3-1mdk
+- 0.4.9.3
+
+* Thu Aug 22 2002 Lenny Cartier <lenny@mandrakesoft.com> 0.4.9.2b-1mdk
+- 0.4.9.2b
+
+* Mon Aug 27 2001 Lenny Cartier <lenny@mandrakesoft.com> 0.4.7-1mdk
+- 0.4.7
+
+* Tue Aug 21 2001 Lenny Cartier <lenny@mandrakesoft.com> 0.4.6-4mdk
+- rebuild
+
+* Mon Jan 22 2001 Lenny Cartier <lenny@mandrakesoft.com> 0.4.6-3mdk
+- rebuild
+
+* Mon Sep 11 2000 Lenny Cartier <lenny@mandrakesoft.com> 0.4.6-2mdk
+- clean spec
+- BM
+
+* Mon Jun 12 2000 John Johnson <jjohnson@linux-mandrake.com> 0.4.6-1mdk
+- updated rpm to version 0.4.6 version of micq
+
+* Fri May 12 2000 Lenny Cartier <lenny@mandrakesoft.com> 0.4.4-1mdk
+- fix group
+- add url
+- bzip2 sources
+- fix files section 
+
+* Sun Apr 30 2000 John Johnson <jjohnson@linux-mandrake.com>
+- built package for mandrake i586
