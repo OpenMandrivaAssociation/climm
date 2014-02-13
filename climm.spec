@@ -14,6 +14,7 @@ BuildRequires:	tcl-devel
 BuildRequires:	pkgconfig(gloox)
 BuildRequires:	pkgconfig(gnutls)
 BuildRequires:	pkgconfig(iksemel)
+BuildRequires:	pkgconfig(libotr)
 
 %description
 climm is a very portable text-mode ICQ clone - it is known to compile
