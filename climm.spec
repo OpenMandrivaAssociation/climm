@@ -1,7 +1,7 @@
 Summary:	Text-mode ICQ clone
 Name:		climm
 Version:	0.7.1
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		Networking/Instant messaging
 Url:		http://www.climm.org/
