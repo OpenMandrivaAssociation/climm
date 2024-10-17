@@ -4,7 +4,7 @@ Version:	0.7.1
 Release:	3
 License:	GPLv2+
 Group:		Networking/Instant messaging
-Url:		http://www.climm.org/
+Url:		https://www.climm.org/
 Source0:	http://www.climm.org/source/%{name}-%{version}.tgz
 Patch0:		climm-0.6.4-linktcl.patch
 Patch1:		climm-0.7.1-gnutls-2.8.patch
