@@ -8,6 +8,11 @@ Url:		https://www.climm.org/
 Source0:	http://www.climm.org/source/%{name}-%{version}.tgz
 Patch0:		climm-0.6.4-linktcl.patch
 Patch1:		climm-0.7.1-gnutls-2.8.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	enca
 BuildRequires:	gettext-devel
 BuildRequires:	tcl-devel
